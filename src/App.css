@@ -5,3 +5,13 @@
   /* text-align: center; */
 }
 
+:root {
+  --primary: #1cdaff;
+  --secondary: #087edf;
+
+  --bg-primary: #1cdaff;
+  --bg-secondary: #087edf;
+
+  --bg-primary-400: #1cd9ff42;
+  --bg-secondary-400: #087edf41;
+}

@@ -7,13 +7,14 @@ import { Services } from './Components/Services/Services'
 import { Mywork } from './Components/Mywork/Mywork'
 import { Contact } from './Components/Contact/Contact'
 import { Footer } from './Components/Footer/Footer'
+import './assets/stylesheets/style.css'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
+      <div style={{justifyItems: 'center', width: '100%', height: '100%'}}>
         <Navbar />
         <Home />
         <About />

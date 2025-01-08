@@ -1,10 +1,10 @@
 import React from 'react'
 import './Contact.css'
-import theme_pattern from '../../assets/theme_pattern.svg';
-import mail_icon from '../../assets/mail_icon.svg';
-import location_icon from '../../assets/location_icon.svg';
-import call_icon from '../../assets/call_icon.svg';
-import arrow_icon from '../../assets/arrow_icon.svg';
+import theme_pattern from '../../assets/images/theme_pattern.png';
+import mail_icon from '../../assets/images/mail_icon.svg';
+import location_icon from '../../assets/images/location_icon.svg';
+import call_icon from '../../assets/images/call_icon.svg';
+import arrow_icon from '../../assets/images/arrow_icon.svg';
 
 export function Contact() {
 
@@ -12,7 +12,7 @@ export function Contact() {
         event.preventDefault();
         const formData = new FormData(event.target);
 
-        formData.append("access_key", "ece0fb86-0a6b-442f-85bf-0b50bc145df0");
+        formData.append("access_key", "");
 
         const object = Object.fromEntries(formData);
         const json = JSON.stringify(object);
@@ -34,26 +34,26 @@ export function Contact() {
 
     return (
         <div id='contact' className='contact'>
-            <div className='contact-title'>
-                <h1>My Work</h1>
+            <div className='sd-section-title'>
+                <h1>Contact</h1>
                 <img src={theme_pattern} alt="" srcset="" />
             </div>
             <div className='contact-section'>
                 <div className="contact-left">
                     <h1>Let's talk</h1>
-                    <p>abcd</p>
+                    <p>Full Stack Developer | Building High-Quality Web and Mobile Experiences | Turning Ideas into Digital Reality</p>
                     <div className='contact-details'>
                         <div className='contact-detail'>
                             <img src={mail_icon} alt="" />
-                            <p>saikirand2014@gmail.com</p>
+                            <p>developer.sai65@gmail.com</p>
                         </div>
                         <div className='contact-detail'>
                             <img src={call_icon} alt="" />
-                            <p>+772-825-524</p>
+                            <p>+91 7041 9966 09</p>
                         </div>
                         <div className='contact-detail'>
                             <img src={location_icon} alt="" />
-                            <p>CA, United States of America</p>
+                            <p>Surat, Gujarat, India - 395010</p>
                         </div>
                     </div>
                 </div>

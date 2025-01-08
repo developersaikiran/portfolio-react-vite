@@ -1,13 +1,13 @@
 import React from 'react'
 import './Services.css'
-import theme_pattern from '../../assets/theme_pattern.svg';
-import services_data from '../../assets/services_data.js';
-import arrow_icon from '../../assets/arrow_icon.svg';
+import theme_pattern from '../../assets/images/theme_pattern.png';
+import services_data from '../../assets/data/services_data.js';
+import arrow_icon from '../../assets/images/arrow_icon.svg';
 
 export function Services() {
     return (
         <div id='services' className='services'>
-            <div className='services-title'>
+            <div className='sd-section-title'>
                 <h1>My Services</h1>
                 <img src={theme_pattern} alt="" srcset="" />
             </div>

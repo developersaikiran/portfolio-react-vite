@@ -1,20 +1,21 @@
 import React from 'react'
 import './Footer.css'
-import theme_pattern from '../../assets/theme_pattern.svg';
-import mail_icon from '../../assets/mail_icon.svg';
-import location_icon from '../../assets/location_icon.svg';
-import call_icon from '../../assets/call_icon.svg';
-import arrow_icon from '../../assets/arrow_icon.svg';
-import footer_logo from '../../assets/footer_logo.svg';
-import user_icon from '../../assets/user_icon.svg';
+import theme_pattern from '../../assets/images/theme_pattern.png';
+import mail_icon from '../../assets/images/mail_icon.svg';
+import location_icon from '../../assets/images/location_icon.svg';
+import call_icon from '../../assets/images/call_icon.svg';
+import arrow_icon from '../../assets/images/arrow_icon.svg';
+// import footer_logo from '../../assets/images/footer_logo.svg';
+import footer_logo from '../../assets/images/logo_light.png';
+import user_icon from '../../assets/images/user_icon.svg';
 
 export function Footer() {
     return (
         <div className='footer'>
             <div className='footer-top'>
                 <div className='footer-top-left'>
-                    <img src={footer_logo} alt="" srcset="" />
-                    <p>Im a frontend Developer from india</p>
+                    <img src={footer_logo} alt="" srcset="" className='footer-logo'/>
+                    <p>Hi, I’m a Full Stack Developer with expertise in turning tech ideas into reality! From creating stunning websites to building complex applications, I have the skills to bring your projects to life.</p>
                 </div>
                 <div className='footer-top-right'>
 
@@ -36,7 +37,6 @@ export function Footer() {
                     <p >Contact with me</p>
                 </div>
             </div>
-
         </div>
     )
 }

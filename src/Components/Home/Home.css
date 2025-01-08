@@ -1,32 +1,60 @@
 .home {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 35px;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* justify-self: center; */
+    /* gap: 30px; */
+    /* margin: 80px 170px; */
+    /* margin-top: 0; */
 }
 
-.home image {
-    margin-top: 150px;
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    /* gap: 30px; */
+    /* margin: 80px 170px; */
+    margin-top: 0;
+}
+
+.home img {
+    width: 400px;
+    height: auto;
 }
 
 .home h1 {
     text-align: center;
-    width: 70%;
-    font-size: 90px;
+    font-size: 80px;
     font-weight: 600;
+    max-width: 80%;
 }
 
 .home h1 span {
-    background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
+    background: linear-gradient(270deg, var(--bg-primary) 10%, var(--bg-secondary) 100%);
     background-color: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 .home p {
     width: 50%;
     text-align: center;
-    font-size: 24px;
-    line-height: 40px;
+    font-size: 22px;
+    line-height: 25px;
+    margin-top: 20px;
 }
 
 .home-action {
@@ -35,18 +63,19 @@
     gap: 25px;
     font-size: 24px;
     font-weight: 500;
-    margin-bottom: 50px;
+    margin-top: 20px;
 }
 
 .home-connect {
-    padding: 25px 45px;
+    padding: 20px 30px;
     border-radius: 50px;
-    background: linear-gradient(270deg, #DF8908 -5.09%, #B415FF 106.28%);
+    background: linear-gradient(270deg, var(--bg-primary) -5.09%, var(--bg-secondary) 106.28%);
     cursor: pointer;
+    /* border: -2px solid transparent */
 }
 
 .home-resume {
-    padding: 25px 45px;
+    padding: 20px 30px;
     border-radius: 50px;
     border: 2px solid #fff;
     cursor: pointer;
@@ -55,38 +84,118 @@
 .home-connect:hover {
     border: 2px solid white
 }
+
 .home-resume:hover {
-    border-color: #B415FF
+    border-color: var(--primary);
+    color: var(--primary)
 }
 
-@media (max-width: 768px) {
-    .home img{
-        /* margin-bottom: 10px; */
+@media (max-width: 1024px) {
+    .home {
+        gap: 15px;
+        /* margin: 80px 50px; */
+        margin-top: 0;
+    }
+
+    .home img {
         width: 260px;
     }
+
     .home h1 {
-        margin-top: 50px;
         width: 90%;
         font-size: 50px;
     }
+
+    .home p {
+        width: 60%;
+        font-size: 18px;
+        line-height: 28px;
+        margin: 10px 0px;
+    }
+
+    .home-action {
+        gap: 16px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .home-connect {
+        padding: 15px 20px;
+        border-radius: 50px;
+    }
+
+    .home-resume {
+        padding: 15px 20px;
+        border-radius: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home img {
+        width: 260px;
+        margin-top: 0;
+    }
+
+    .home h1 {
+        margin-top: 20px;
+        width: 90%;
+        font-size: 50px;
+    }
+
     .home p {
         width: 60%;
         font-size: 18px;
         line-height: 32px;
         margin: 10px 0px;
     }
-    .home-action{
+
+    .home-action {
         gap: 16px;
         font-size: 18px;
         font-weight: 500;
-        margin-bottom: 50px;
     }
-    .home-connect{
-        padding: 20px 30px;
-        border-radius: 40px;
+
+    .home-connect {
+        padding: 15px 20px;
     }
-    .home-resume{
-        padding: 20px 30px;
-        border-radius: 40px;
+
+    .home-resume {
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home {
+        width: 100%;
+        padding: 10px;
+        margin-top: 0;
+    }
+    .home img {
+        width: 260px;
+    }
+    .home h1 {
+        margin-top: 10px;
+        min-width: 100%;
+        font-size: 28px;
+        margin: 10px 20px;
+    }
+    .home p {
+        min-width: 100%;
+        font-size: 14px;
+        line-height: 15px;
+        margin: 10px 20px;
+    }
+    .home-action {
+        gap: 16px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .home-connect {
+        padding: 10px 20px;
+    }
+
+    .home-resume {
+        padding: 10px 20px;
     }
 }
